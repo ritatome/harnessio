@@ -1,0 +1,33 @@
+pipeline:
+    name: ALM Pipeline
+    identifier: ALM_Pipeline
+    projectIdentifier: Project_123
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: Git_connector
+                build: <+input>
+    stages:
+        - stage:
+              name: Development
+              identifier: Development
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: VM
+                      spec:
+                          type: Pool
+                          spec:
+                              identifier: " us-east-1_6cJvK46mF"
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: Dev Run
+                                identifier: Dev_Run
+                                spec:
+                                    shell: Sh
+                                    command: cd
