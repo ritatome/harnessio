@@ -1,0 +1,7 @@
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\bin\Debug\HarnessIoTestApp.exe.config
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\bin\Debug\HarnessIoTestApp.exe
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\bin\Debug\HarnessIoTestApp.pdb
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\obj\Debug\HarnessIoTestApp.csprojAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\obj\Debug\HarnessIoTestApp.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\obj\Debug\HarnessIoTestApp.exe
+\\Mac\Home\Documents\GitHub\harnessio\HarnessIoTestApp\HarnessIoTestApp\obj\Debug\HarnessIoTestApp.pdb
