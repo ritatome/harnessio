@@ -31,3 +31,45 @@ pipeline:
                                 spec:
                                     shell: Sh
                                     command: cd
+        - stage:
+              name: Approval
+              identifier: Approval
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: Approvers
+                                identifier: Approvers
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups:
+                                            - account.Approvers
+                                    approverInputs: []
+              tags: {}
+        - stage:
+              name: Production
+              identifier: Production
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      useFromStage: Development
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: Another Run
+                                identifier: Another_Run
+                                spec:
+                                    shell: Sh
+                                    command: cd
