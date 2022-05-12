@@ -1,0 +1,12 @@
+connector:
+  name: K8s
+  identifier: K8s
+  description:
+  orgIdentifier: default
+  projectIdentifier: Project_123
+  type: K8sCluster
+  spec:
+    credential:
+      type: InheritFromDelegate
+    delegateSelectors:
+    - dockerdelegate
