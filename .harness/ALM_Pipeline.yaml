@@ -73,3 +73,5 @@ pipeline:
                                 spec:
                                     shell: Sh
                                     command: cd
+    delegateSelectors:
+        - dockerdelegate
