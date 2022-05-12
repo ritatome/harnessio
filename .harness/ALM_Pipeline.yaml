@@ -57,6 +57,32 @@ pipeline:
                                     approverInputs: []
               tags: {}
         - stage:
+              name: FeatureFlag
+              identifier: FeatureFlag
+              description: ""
+              type: FeatureFlag
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: FlagConfiguration
+                                name: Flag step
+                                identifier: Flag_step
+                                spec:
+                                    feature: ALM_Flag
+                                    environment: Production
+                                    instructions:
+                                        - identifier: SetFeatureFlagStateIdentifier
+                                          type: SetFeatureFlagState
+                                          spec:
+                                              state: "on"
+                                        - identifier: SetDefaultVariationsIdentifier
+                                          type: SetDefaultVariations
+                                          spec:
+                                              "on": "true"
+                                              "off": "false"
+                                timeout: 10m
+        - stage:
               name: Production
               identifier: Production
               type: CI
