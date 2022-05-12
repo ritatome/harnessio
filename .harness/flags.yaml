@@ -1,4 +1,30 @@
 featureFlags:
-  flags: []
+  flags:
+  - flag:
+      name: ALM Flag
+      identifier: ALM_Flag
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: Development
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Production
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
   projectIdentifier: Project_123
   orgIdentifier: default
