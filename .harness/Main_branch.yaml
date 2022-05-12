@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "Main_branch"
+  pipeline:
+    identifier: "ALM_Pipeline"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "branch"
+            spec:
+              branch: "\\main"
+  name: "Main branch"
+  orgIdentifier: "default"
+  projectIdentifier: "Project_123"
